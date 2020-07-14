@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_huawei_portal_huawei_portal,huawei_portal.huawei_portal,model_huawei_portal_huawei_portal,base.group_user,1,1,1,1
+access_huawei_portal_area,huawei_portal.area,model_huawei_portal_area,base.group_user,1,1,1,1
+access_huawei_portal_brand,huawei_portal.brand,model_huawei_portal_brand,base.group_user,1,1,1,1
+access_huawei_portal_sla_category,huawei_portal.sla_category,model_huawei_portal_sla_category,base.group_user,1,1,1,1
+access_huawei_portal_sla,huawei_portal.sla,model_huawei_portal_sla,base.group_user,1,1,1,1
