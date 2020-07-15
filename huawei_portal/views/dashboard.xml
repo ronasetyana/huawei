@@ -38,16 +38,5 @@
 
             </field>
         </record>
-
-
-        <record model="ir.actions.act_window" id="embed_list_action">
-            <field name="name">Embed</field>
-            <field name="res_model">huawei_portal.embed</field>
-            <field name="view_mode">form</field>
-            <field name="view_id"/>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_smiling_face">No Data</p>
-            </field>
-        </record>
     </data>
 </odoo>

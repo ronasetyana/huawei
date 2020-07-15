@@ -28,6 +28,15 @@
       <field name="res_model">huawei_portal.huawei_portal</field>
       <field name="view_mode">tree,form,pivot,graph</field>
     </record>
+    <record model="ir.actions.act_window" id="huawei_portal.embed_list_action">
+      <field name="name">Embed</field>
+      <field name="res_model">huawei_portal.embed</field>
+      <field name="view_mode">form</field>
+      <field name="view_id"/>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_smiling_face">No Data</p>
+      </field>
+    </record>
     <!-- server action to the one above -->
     <record model="ir.actions.server" id="huawei_portal.action_server">
       <field name="name">huawei_portal server</field>
