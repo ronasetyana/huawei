@@ -5,3 +5,4 @@ access_huawei_portal_brand,huawei_portal.brand,model_huawei_portal_brand,base.gr
 access_huawei_portal_sla_category,huawei_portal.sla_category,model_huawei_portal_sla_category,base.group_user,1,1,1,1
 access_huawei_portal_sla,huawei_portal.sla,model_huawei_portal_sla,base.group_user,1,1,1,1
 access_huawei_portal_embed,huawei_portal.embed,model_huawei_portal_embed,base.group_user,1,1,1,1
+access_huawei_portal_approval,huawei_portal.approval,model_huawei_portal_approval,base.group_user,1,1,1,1

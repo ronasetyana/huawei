@@ -84,5 +84,37 @@
         </pivot>
       </field>
     </record>
+    <record id="huawei_portal_form_view" model="ir.ui.view">
+      <field name="name">huawei.portal.form.view</field>
+      <field name="model">huawei_portal.huawei_portal</field>
+      <field name="arch" type="xml">
+        <form string="Huawei Portal">
+          <header>
+            <button name="action_request_exception" type="object" class="oe_highlight" string="REQUEST EXCEPTION"/>
+          </header>
+          <sheet>
+            <group>
+              <group>
+                <field name="date" />
+                <field name="sla_category"/>
+                <field name="sla_id"/>
+                <field name="area"/>
+                <field name="baseline"/>
+                <field name="target"/>
+                <field name="actual"/>
+              </group>
+              <group>
+                <field name="sla_weight"/>
+                <field name="sc_allocated"/>
+                <field name="sla_allowable_gap"/>
+                <field name="performance_gap"/>
+                <field name="sc_due"/>
+                <field name="sc_offset"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
   </data>
 </odoo>

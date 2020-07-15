@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'base_setup', 'mail'],
 
     # always loaded
     'data': [
@@ -27,6 +27,7 @@
         'views/dashboard.xml',
         'views/views.xml',
         'views/templates.xml',
+        'views/approval_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

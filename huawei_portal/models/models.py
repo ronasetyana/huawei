@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class HuaweiPortal(models.Model):
@@ -25,6 +25,25 @@ class HuaweiPortal(models.Model):
     def _compute_performance_gap(self):
         self.performance_gap = self.actual - self.target
 
+    def action_request_exception(self):
+        ctx = self._context.copy()
+
+        approval_id = self.env['huawei_portal.approval'].search([('src_model','=',self._name),('src_id','=',self.id)])
+
+        if not approval_id:
+            ctx['default_src_model'] = self._name
+            ctx['default_src_id'] = self.id
+
+        res = {
+            'name': _('Approval'),
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'huawei_portal.approval',
+            'context': ctx,
+            'res_id': approval_id.id or False
+        }
+
+        return res
     # name = fields.Char()
     # value = fields.Integer()
     # value2 = fields.Float(compute="_value_pc", store=True)
@@ -60,3 +79,15 @@ class SLA(models.Model):
     allowable_gap = fields.Float(string='Allowable Gap')
 
 
+class Approval(models.Model):
+    _name = 'huawei_portal.approval'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
+    SELECTION_STAGE = [('draft', 'Draft'), ('sent', 'Sent'), ('approve','Approve')]
+
+    src_model = fields.Char()
+    src_id = fields.Integer()
+    date = fields.Date()
+    request_by = fields.Many2one('res.users')
+    reason = fields.Text()
+    stage = fields.Selection(SELECTION_STAGE, default='draft')
