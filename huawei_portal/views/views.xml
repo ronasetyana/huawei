@@ -49,7 +49,8 @@
               action="huawei_portal.action_window"/>
     <menuitem name="Server" id="huawei_portal.menu_2" parent="huawei_portal.menu_root"
               action="huawei_portal.action_server"/>
-
+    <menuitem name="Dashboard" id="huawei_portal.menu_3" parent="huawei_portal.menu_root"
+              action="huawei_portal.embed_list_action"/>
     <!-- actions -->
 <!--
     <menuitem name="List" id="huawei_portal.menu_1_list" parent="huawei_portal.menu_1"

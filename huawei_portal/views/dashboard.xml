@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="embed_form_view">
+            <field name="name">embed.form</field>
+            <field name="model">huawei_portal.embed</field>
+            <field name="arch" type="html">
+                <form string="Embedded Webpage" version="7.0" edit="false" create="false">
+                    <center>
+<!--                        <iframe src='https://10ax.online.tableau.com/t/tableauapidev275913/views/Tutorial_GetStartedinTableauDesktop/ImproveProfitsintheSouth?:showAppBanner=false:display_count=n:showVizHome=n:origin=viz_share_link'-->
+<!--                                style="height: 600px; width: 100%; border-width:0px;">-->
+<!--&lt;!&ndash;                        <iframe src='https://10ax.online.tableau.com/t/tableauapidev275913/views/Tutorial_GetStartedinTableauDesktop/ImproveProfitsintheSouth?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link'&ndash;&gt;-->
+<!--                        </iframe>-->
+<!--                         <iframe src="https://www.playkeepout.com" marginwidth="0" marginheight="0" frameborder="no"  style="height: 600px; width: 100%; border-width:0px;">-->
+<!--                         </iframe>-->
+                        <script type='text/javascript'
+                                src='https://10ax.online.tableau.com/javascripts/api/viz_v1.js'></script>
+                        <div class='tableauPlaceholder' style='width: 1016px; height: 991px;'>
+                            <object class='tableauViz' width='1016' height='991' style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2F10ax.online.tableau.com%2F'/>
+                                <param name='embed_code_version' value='3'/>
+                                <param name='site_root' value='&#47;t&#47;tableauapidev275913'/>
+                                <param name='name'
+                                       value='Tutorial_GetStartedinTableauDesktop&#47;ImproveProfitsintheSouth'/>
+                                <param name='tabs' value='no'/>
+                                <param name='toolbar' value='yes'/>
+                                <param name='showAppBanner' value='false'/>
+                            </object>
+                        </div>
+                    </center>
+                    <style>
+                        .tableauPlaceholder iframe {
+                            width: 100%;
+                            height: 900px;
+                        }
+                    </style>
+                </form>
+
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="embed_list_action">
+            <field name="name">Embed</field>
+            <field name="res_model">huawei_portal.embed</field>
+            <field name="view_mode">form</field>
+            <field name="view_id"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">No Data</p>
+            </field>
+        </record>
+    </data>
+</odoo>
