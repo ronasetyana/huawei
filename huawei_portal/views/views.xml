@@ -57,5 +57,22 @@
     <menuitem name="Server to list" id="huawei_portal" parent="huawei_portal.menu_2"
               action="huawei_portal.action_server"/>
 -->
+    <record id="huawei_portal_report_view_pivot" model="ir.ui.view">
+      <field name="name">huawei.portal.report.pivot</field>
+      <field name="model">huawei_portal.huawei_portal</field>
+      <field name="arch" type="xml">
+        <pivot string="Report" display_quantity="true">
+          <field name="sla_category" type="row"/>
+          <field name="sla_id" type="row"/>
+          <field name="target" type="measure"/>
+          <field name="actual" type="measure"/>
+          <field name="sla_weight" type="measure"/>
+          <field name="sc_allocated" type="measure"/>
+          <field name="sla_allowable_gap" type="measure"/>
+          <field name="performance_gap" type="measure"/>
+          <field name="sc_offset" type="measure"/>
+        </pivot>
+      </field>
+    </record>
   </data>
 </odoo>
