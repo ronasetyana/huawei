@@ -14,15 +14,15 @@
 <!--                         <iframe src="https://www.playkeepout.com" marginwidth="0" marginheight="0" frameborder="no"  style="height: 600px; width: 100%; border-width:0px;">-->
 <!--                         </iframe>-->
                         <script type='text/javascript'
-                                src='https://10ax.online.tableau.com/javascripts/api/viz_v1.js'></script>
+                                src='http://vpn.jukesolutions.com:88/javascripts/api/viz_v1.js'></script>
                         <div class='tableauPlaceholder' style='width: 1016px; height: 991px;'>
                             <object class='tableauViz' width='1016' height='991' style='display:none;'>
-                                <param name='host_url' value='https%3A%2F%2F10ax.online.tableau.com%2F'/>
+                                <param name='host_url' value='http%3A%2F%2Fvpn.jukesolutions.com%3A88%2F'/>
                                 <param name='embed_code_version' value='3'/>
-                                <param name='site_root' value='&#47;t&#47;tableauapidev275913'/>
+                                <param name='site_root' value=''/>
                                 <param name='name'
-                                       value='Tutorial_GetStartedinTableauDesktop&#47;ImproveProfitsintheSouth'/>
-                                <param name='tabs' value='no'/>
+                                       value='KPI_Downlink_Throughput&#47;Summary'/>
+                                <param name='tabs' value='yes'/>
                                 <param name='toolbar' value='yes'/>
                                 <param name='showAppBanner' value='false'/>
                             </object>
