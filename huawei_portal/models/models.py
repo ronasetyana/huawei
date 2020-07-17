@@ -20,6 +20,7 @@ class HuaweiPortal(models.Model):
     performance_gap = fields.Float(compute='_compute_performance_gap', string='Performance Gap', store=True, group_operator='avg')
     sc_due = fields.Datetime(string='SC Due', store=True)
     sc_offset = fields.Float(string='SC Offset', store=True, group_operator='avg')
+    formula = fields.Text(string='SLA Formula', store=True)
 
     @api.depends('target', 'actual')
     def _compute_performance_gap(self):
