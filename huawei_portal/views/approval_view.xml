@@ -43,9 +43,9 @@
 		<menuitem name="Approvals" id="huawei_portal.menu_4" parent="huawei_portal.menu_root" action="huawei_portal.approval_window"/>
 
 		<record model="ir.actions.act_window" id="huawei_portal.approval_window">
-		  <field name="name">Approvals</field>
-		  <field name="res_model">huawei_portal.approval</field>
-		  <field name="view_mode">tree,form,pivot,graph</field>
+			<field name="name">Approvals</field>
+			<field name="res_model">huawei_portal.approval</field>
+			<field name="view_mode">tree,form,pivot,graph</field>
 		</record>
     </data>
 </odoo>
