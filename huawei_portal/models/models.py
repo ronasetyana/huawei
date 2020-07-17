@@ -83,11 +83,19 @@ class Approval(models.Model):
     _name = 'huawei_portal.approval'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    SELECTION_STAGE = [('draft', 'Draft'), ('sent', 'Sent'), ('approve','Approve')]
+    SELECTION_state = [('draft', 'Draft'), ('sent', 'Sent'), ('approve','Approve')]
 
     src_model = fields.Char()
     src_id = fields.Integer()
     date = fields.Date()
     request_by = fields.Many2one('res.users')
     reason = fields.Text()
-    stage = fields.Selection(SELECTION_STAGE, default='draft')
+    state = fields.Selection(SELECTION_state, default='draft')
+
+    def button_confirm(self):
+        for order in self:
+            if order.state not in ['draft', 'sent']:
+                continue
+        order.write({'state': 'approve'})
+
+        return True

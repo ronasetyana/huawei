@@ -33,6 +33,7 @@
       <field name="res_model">huawei_portal.embed</field>
       <field name="view_mode">form</field>
       <field name="view_id"/>
+      <field name="target">inline</field>
       <field name="help" type="html">
           <p class="oe_view_nocontent_smiling_face">No Data</p>
       </field>
@@ -90,7 +91,7 @@
       <field name="arch" type="xml">
         <form string="Huawei Portal">
           <header>
-            <button name="action_request_exception" type="object" class="oe_highlight" string="REQUEST EXCEPTION"/>
+            <button name="action_request_exception" type="object" class="oe_highlight" string="REQUEST EXCLUSION"/>
           </header>
           <sheet>
             <group>
